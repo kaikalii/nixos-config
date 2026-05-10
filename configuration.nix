@@ -21,6 +21,8 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  systemd.services."user@".serviceConfig.NoNewPrivileges = false;
+
   networking.hostName = "kais_laptop"; # Define your hostname.
 
   # Configure network connections interactively with nmcli or nmtui.
@@ -86,6 +88,7 @@
     firefox
     home-manager
     curl
+    rustup
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
