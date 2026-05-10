@@ -21,6 +21,7 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               users.kai = import ./home.nix;
+              backupFileExtension = "bak";
             };
           }
         ];

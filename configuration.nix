@@ -80,8 +80,6 @@
     wget
     git
     firefox
-    vscode
-    discord
     home-manager
   ];
 

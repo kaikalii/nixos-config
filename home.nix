@@ -8,6 +8,10 @@
     shellAliases = {
       nrs = "sudo nixos-rebuild switch --flake ~/nixos-config#nixos";
     };
+    packages = with pkgs; [
+      vscode
+      discord
+    ];
   };
   programs = {
     firefox = {
