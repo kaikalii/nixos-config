@@ -77,7 +77,8 @@
     initialPassword = "changeme";
   };
 
-  # programs.firefox.enable = true;
+  programs.firefox.enable = true;
+  programs.starship.enable = true;
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
@@ -89,6 +90,7 @@
     home-manager
     curl
     rustup
+    starship
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
