@@ -3,8 +3,6 @@
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
 {
-  config,
-  lib,
   pkgs,
   ...
 }:
@@ -35,6 +33,45 @@
     packages = [ fira-code ];
     fonts = [ fira-code ];
   };
+
+  services.syncthing = {
+    enable = true;
+    openDefaultPorts = true; # Open ports in the firewall for Syncthing. (NOTE: this will not open syncthing gui port)
+    guiAddress = "0.0.0.0:8384"; # By default syncthing only listens to localhost
+    user = "kai";
+    dataDir = "/home/kai"; # Sets the base directory for syncthing data
+    configDir = "/home/kai/.config/syncthing"; # Stores database/keys in your home
+    settings = {
+      gui.user = "kai";
+      gui.password = "syncthing";
+      devices = {
+        "Laptop".id = "OZSWG6Z-PTZAEZ7-U2I3GN2-RJFCIES-QVA36ZI-TVAPK6Y-UJIC3JZ-VFTJIQI";
+        "Phone".id = "P4775T7-R4CQIFP-VPFSVUS-V426EHK-O2NOCVV-G5YS7VS-QKNQCRO-D4GCTQU";
+      };
+      folders =
+        let
+          all_devices = [
+            "Laptop"
+            "Phone"
+          ];
+        in
+        {
+          "Pictures" = {
+            path = "/home/kai/Pictures";
+            id = "pictures";
+            devices = all_devices;
+          };
+          "Documents" = {
+            path = "/home/kai/Documents";
+            id = "documents";
+            devices = all_devices;
+          };
+        };
+    };
+  };
+
+  # port 8384  is the default port to allow access from the network.
+  networking.firewall.allowedTCPPorts = [ 8384 ];
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
