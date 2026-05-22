@@ -98,6 +98,8 @@
         ];
         ui_font_size = 18.0;
         buffer_font_size = 17.0;
+        semantic_tokens = "combined";
+        multi_cursor_modifier = "ctrl";
       };
       userKeymaps = [
         {
