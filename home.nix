@@ -1,5 +1,8 @@
 { pkgs, ... }:
 {
+  imports = [
+    ./zed.nix
+  ];
   home = {
     username = "kai";
     homeDirectory = "/home/kai";
@@ -28,6 +31,7 @@
     ];
   };
   programs = {
+    bash.enable = true;
     firefox = {
       enable = true;
       profiles.default = {
@@ -39,8 +43,8 @@
         };
       };
     };
-    bash.enable = true;
   };
+
   dconf.settings = {
     "org/gnome/shell" = {
       disable-user-extensions = false;
