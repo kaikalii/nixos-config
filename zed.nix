@@ -105,8 +105,12 @@
         {
           bindings = {
             "ctrl-o" = "workspace::Open";
+            "ctrl-g ctrl-c" = "git::Commit";
+            "ctrl-g ctrl-p" = "git::Push";
+            "ctrl-g ctrl-l" = "git::Pull";
           };
           unbind = {
+            "ctrl-g" = "go_to_line::Toggle";
             "ctrl-k ctrl-o" = "workspace::Open";
             "ctrl-shift-w" = "workspace::CloseWindow";
           };
@@ -117,6 +121,7 @@
             "ctrl-shift-e" = "workspace::ToggleLeftDock";
             "ctrl-e" = "project_panel::ToggleFocus";
             "alt-g" = "git_panel::ToggleFocus";
+            "alt-l" = "go_to_line::Toggle";
           };
           unbind = {
             "ctrl-b" = "workspace::ToggleLeftDock";
