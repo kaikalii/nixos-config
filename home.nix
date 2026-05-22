@@ -44,6 +44,9 @@
   };
 
   dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      clock-format = "12h";
+    };
     "org/gnome/shell" = {
       disable-user-extensions = false;
       enabled-extensions = [ "dash-to-panel@jderose9.github.com" ];
