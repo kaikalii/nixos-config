@@ -8,13 +8,19 @@
       nrs = "sudo nixos-rebuild switch --flake ~/nixos-config#nixos";
     };
     packages = with pkgs; [
-      vscode-fhs
+      # Desktop
+      gnomeExtensions.dash-to-panel
+      # Apps
       zed-editor
       discord
+      steam
+      musescore
+      modrinth-app
+      rimsort
+      # Utils
       nixfmt
       nil
       nixd
-      gnomeExtensions.dash-to-panel
     ];
     sessionPath = [
       "$HOME/.cargo/bin"
