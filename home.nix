@@ -15,6 +15,7 @@
     packages = with pkgs; [
       # Desktop
       gnomeExtensions.dash-to-panel
+      gnomeExtensions.night-theme-switcher
       # Apps
       zed-editor
       discord
@@ -51,7 +52,10 @@
     };
     "org/gnome/shell" = {
       disable-user-extensions = false;
-      enabled-extensions = [ "dash-to-panel@jderose9.github.com" ];
+      enabled-extensions = [
+        "dash-to-panel@jderose9.github.com"
+        "nightthemeswitcher@romainvigier.fr"
+      ];
       enable-hot-corners = false;
       favorite-apps = [
         "org.gnome.Nautilus.desktop"
