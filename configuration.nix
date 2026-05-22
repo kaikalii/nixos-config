@@ -101,6 +101,8 @@
     gnumake
     pkg-config
     alsa-lib
+    ripgrep
+    htop
   ];
 
   programs = {
