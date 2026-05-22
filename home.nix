@@ -9,7 +9,7 @@
     stateVersion = "25.05";
     enableNixpkgsReleaseCheck = false;
     shellAliases = {
-      nrs = "sudo nixos-rebuild switch --flake ~/nixos-config#nixos";
+      reload = "sudo nixos-rebuild switch --flake ~/nixos-config#nixos";
     };
     packages = with pkgs; [
       # Desktop
