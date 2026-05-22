@@ -10,6 +10,7 @@
     };
     packages = with pkgs; [
       vscode-fhs
+      zed-editor
       discord
       nixfmt
       gnomeExtensions.dash-to-panel
