@@ -14,6 +14,9 @@
       nixfmt
       gnomeExtensions.dash-to-panel
     ];
+    sessionPath = [
+      "$HOME/.cargo/bin"
+    ];
   };
   programs = {
     firefox = {
@@ -28,7 +31,6 @@
       };
     };
     bash.enable = true;
-
   };
   dconf.settings = {
     "org/gnome/shell" = {

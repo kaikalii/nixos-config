@@ -89,9 +89,12 @@
     firefox
     home-manager
     curl
-    rustup
     starship
     gcc
+    libffi
+    gnumake
+    pkg-config
+    alsa-lib
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
