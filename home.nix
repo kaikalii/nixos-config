@@ -19,6 +19,7 @@
       discord
       modrinth-app
       rimsort
+      spotify
       # Utils
       nixfmt
       nil
