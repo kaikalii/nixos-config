@@ -52,6 +52,15 @@
       disable-user-extensions = false;
       enabled-extensions = [ "dash-to-panel@jderose9.github.com" ];
       enable-hot-corners = false;
+      favorite-apps = [
+        "org.gnome.Nautilus.desktop"
+        "org.gnome.Console.desktop"
+        "firefox.desktop"
+        "dev.zed.Zed.desktop"
+        "discord.desktop"
+        "spotify.desktop"
+        "org.gnome.Settings.desktop"
+      ];
     };
     "org/gnome/shell/extensions/dash-to-panel" = {
       panel-position = "BOTTOM";
