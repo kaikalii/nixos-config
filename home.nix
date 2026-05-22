@@ -17,7 +17,6 @@
       # Apps
       zed-editor
       discord
-      steam
       musescore
       modrinth-app
       rimsort

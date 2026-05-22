@@ -111,6 +111,7 @@
     nix-ld.enable = true;
     vim.enable = true;
     git.enable = true;
+    steam.enable = true;
   };
 
   system.stateVersion = "25.11"; # Do not change this for any reason!
