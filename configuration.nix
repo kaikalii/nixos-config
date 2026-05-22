@@ -11,6 +11,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ./musescore.nix
   ];
 
   # Use the systemd-boot EFI boot loader.
@@ -112,6 +113,10 @@
     vim.enable = true;
     git.enable = true;
     steam.enable = true;
+    appimage = {
+      enable = true;
+      binfmt = true;
+    };
   };
 
   system.stateVersion = "25.11"; # Do not change this for any reason!
