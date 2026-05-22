@@ -4,6 +4,7 @@
     username = "kai";
     homeDirectory = "/home/kai";
     stateVersion = "25.05";
+    enableNixpkgsReleaseCheck = false;
     shellAliases = {
       nrs = "sudo nixos-rebuild switch --flake ~/nixos-config#nixos";
     };
