@@ -10,6 +10,7 @@
     enableNixpkgsReleaseCheck = false;
     shellAliases = {
       reload = "sudo nixos-rebuild switch --flake ~/nixos-config#nixos";
+      git-fix = "git add --all && git commit --amend --no-edit && git push -f";
     };
     packages = with pkgs; [
       # Desktop
