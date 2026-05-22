@@ -39,7 +39,13 @@
               { pkgs, ... }:
               {
                 nixpkgs.overlays = [ rust-overlay.overlays.default ];
-                environment.systemPackages = [ pkgs.rust-bin.stable.latest.default ];
+                environment.systemPackages = [
+                  (pkgs.rust-bin.stable.latest.default.override {
+                    targets = [ "x86_64-unknown-linux-gnu"
+                      "wasm32-unknown-unknown"
+                      "wasm32-wasip2" ];
+                  })
+                ];
               }
             )
           ];

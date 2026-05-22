@@ -1,5 +1,4 @@
 { config, pkgs, ... }:
-
 {
   home = {
     username = "kai";
@@ -13,6 +12,8 @@
       zed-editor
       discord
       nixfmt
+      nil
+      nixd
       gnomeExtensions.dash-to-panel
     ];
     sessionPath = [
