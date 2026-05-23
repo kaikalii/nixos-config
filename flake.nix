@@ -46,6 +46,7 @@
                       "wasm32-unknown-unknown"
                       "wasm32-wasip2"
                     ];
+                    extensions = [ "rust-src" ];
                   })
                 ];
               }
