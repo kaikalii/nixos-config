@@ -104,6 +104,7 @@
       userKeymaps = [
         {
           bindings = {
+            "ctrl-r" = "projects::OpenRecent";
             "ctrl-o" = "workspace::Open";
             "ctrl-g ctrl-c" = "git::Commit";
             "ctrl-g ctrl-p" = "git::Push";
@@ -127,6 +128,7 @@
             "ctrl-b" = "workspace::ToggleLeftDock";
             "ctrl-shift-e" = "project_panel::ToggleFocus";
             "ctrl-shift-g" = "git_panel::ToggleFocus";
+            "ctrl-r" = "projects::OpenRecent";
           };
         }
         {
