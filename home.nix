@@ -22,6 +22,7 @@
       modrinth-app
       rimsort
       spotify
+      python3
       # Utils
       nixfmt
       nil
