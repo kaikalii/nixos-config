@@ -75,4 +75,12 @@
       multi-monitors = true;
     };
   };
+
+  home.file.".config/autostart/discord.desktop".text = ''
+    [Desktop Entry]
+    Name=Discord
+    Exec=${pkgs.discord}/bin/discord --start-minimized
+    Type=Application
+    Categories=Network;InstantMessaging;
+  '';
 }
