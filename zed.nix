@@ -100,6 +100,14 @@
         buffer_font_size = 17.0;
         semantic_tokens = "combined";
         multi_cursor_modifier = "ctrl";
+        profiles = {
+          Uiua = {
+            settings = {
+              buffer_font_family = "Uiua386";
+              buffer_font_size = 18;
+            };
+          };
+        };
       };
       userKeymaps = [
         {

@@ -117,6 +117,11 @@
       enable = true;
       binfmt = true;
     };
+    direnv = {
+      enable = true;
+      enableBashIntegration = true;
+      nix-direnv.enable = true;
+    };
   };
 
   system.stateVersion = "25.11"; # Do not change this for any reason!
