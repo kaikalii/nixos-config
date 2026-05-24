@@ -20,6 +20,9 @@
           args: name:
           args.nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
+            specialArgs = {
+              hostName = name;
+            };
             modules = [
               ./configuration.nix
               ./${name}/hardware-configuration.nix

@@ -4,6 +4,7 @@
 
 {
   pkgs,
+  hostName,
   ...
 }:
 
@@ -17,9 +18,7 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  systemd.services."user@".serviceConfig.NoNewPrivileges = false;
-
-  networking.hostName = "kais_laptop"; # Define your hostname.
+  networking.hostName = "kais_${hostName}"; # Define your hostname.
 
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
