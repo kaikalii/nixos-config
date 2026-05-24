@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, hostName, ... }:
 {
   imports = [
     ./zed.nix
@@ -9,7 +9,7 @@
     stateVersion = "25.05";
     enableNixpkgsReleaseCheck = false;
     shellAliases = {
-      reload = "sudo nixos-rebuild switch --flake ~/nixos-config#nixos --impure";
+      reload = "sudo nixos-rebuild switch --flake ~/nixos-config#${hostName}";
       git-fix = "git add --all && git commit --amend --no-edit && git push -f";
     };
     packages = with pkgs; [
