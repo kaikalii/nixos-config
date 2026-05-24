@@ -9,7 +9,7 @@
     stateVersion = "25.05";
     enableNixpkgsReleaseCheck = false;
     shellAliases = {
-      reload = "sudo nixos-rebuild switch --flake ~/nixos-config#nixos";
+      reload = "sudo nixos-rebuild switch --flake ~/nixos-config#nixos --impure";
       git-fix = "git add --all && git commit --amend --no-edit && git push -f";
     };
     packages = with pkgs; [
@@ -22,11 +22,14 @@
       modrinth-app
       rimsort
       spotify
+      fontforge
+      gimp
+      # Langs
       python3
       # Utils
-      nixfmt
       nil
       nixd
+      nixfmt
     ];
     sessionPath = [
       "$HOME/.cargo/bin"
