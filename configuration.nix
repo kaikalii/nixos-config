@@ -120,6 +120,16 @@
     };
   };
 
+  # Nvidia
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = false;
+    open = false;
+    nvidiaSettings = true;
+    package = pkgs.linuxPackages.nvidiaPackages.stable;
+  };
+
   system.stateVersion = "25.11"; # Do not change this for any reason!
 
   nix.settings.experimental-features = [
