@@ -16,6 +16,8 @@
       # Desktop
       gnomeExtensions.dash-to-panel
       gnomeExtensions.night-theme-switcher
+      gnomeExtensions.quick-settings-audio-devices-renamer
+      gnomeExtensions.quick-settings-audio-devices-hider
       # Apps
       zed-editor
       discord
@@ -76,7 +78,7 @@
       show-apps-icon = false;
       show-favorites = true;
       show-activities = false;
-      multi-monitors = true;
+      multi-monitors = false;
     };
   };
 

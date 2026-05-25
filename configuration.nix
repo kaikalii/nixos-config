@@ -10,9 +10,48 @@
 }:
 
 {
+
+  environment.systemPackages = with pkgs; [
+    wget
+    gh
+    home-manager
+    curl
+    starship
+    gcc
+    libffi
+    gnumake
+    pkg-config
+    alsa-lib
+    ripgrep
+    htop
+    ripgrep
+    lshw
+    pciutils
+  ];
+
+  programs = {
+    firefox.enable = true;
+    starship.enable = true;
+    nix-ld.enable = true;
+    vim.enable = true;
+    git.enable = true;
+    steam.enable = true;
+    appimage = {
+      enable = true;
+      binfmt = true;
+    };
+    direnv = {
+      enable = true;
+      enableBashIntegration = true;
+      nix-direnv.enable = true;
+    };
+  };
+
   imports = [
     ./musescore.nix
   ];
+
+  system.autoUpgrade.channel = "https://nixos.org/channels/nixos-21.05/";
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -31,6 +70,33 @@
     packages = [ fira-code ];
   };
 
+  # port 8384  is the default port to allow access from the network.
+  networking.firewall.allowedTCPPorts = [ 8384 ];
+
+  # X11 windowing system.
+  services.xserver.enable = true;
+  services.displayManager.gdm.enable = true;
+  services.desktopManager.gnome.enable = true;
+  hardware.graphics.enable = true;
+
+  # Geoclue
+  location.provider = "geoclue2";
+  services.geoclue2 = {
+    enable = true;
+    geoProviderUrl = "https://api.beacondb.net/v1/geolocate";
+  };
+
+  # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.users.kai = {
+    isNormalUser = true;
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+    ]; # Enable ‘sudo’ for the user.
+    initialPassword = "changeme";
+  };
+
+  # Syncthing
   services.syncthing = {
     enable = true;
     openDefaultPorts = true; # Open ports in the firewall for Syncthing. (NOTE: this will not open syncthing gui port)
@@ -66,58 +132,6 @@
             devices = all_devices;
           };
         };
-    };
-  };
-
-  # port 8384  is the default port to allow access from the network.
-  networking.firewall.allowedTCPPorts = [ 8384 ];
-
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
-  hardware.graphics.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.kai = {
-    isNormalUser = true;
-    extraGroups = [
-      "wheel"
-      "networkmanager"
-    ]; # Enable ‘sudo’ for the user.
-    initialPassword = "changeme";
-  };
-
-  environment.systemPackages = with pkgs; [
-    wget
-    gh
-    home-manager
-    curl
-    starship
-    gcc
-    libffi
-    gnumake
-    pkg-config
-    alsa-lib
-    ripgrep
-    htop
-  ];
-
-  programs = {
-    firefox.enable = true;
-    starship.enable = true;
-    nix-ld.enable = true;
-    vim.enable = true;
-    git.enable = true;
-    steam.enable = true;
-    appimage = {
-      enable = true;
-      binfmt = true;
-    };
-    direnv = {
-      enable = true;
-      enableBashIntegration = true;
-      nix-direnv.enable = true;
     };
   };
 
