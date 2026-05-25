@@ -11,6 +11,7 @@
     shellAliases = {
       reload = "sudo nixos-rebuild switch --flake ~/nixos-config#${hostName}";
       git-fix = "git add --all && git commit --amend --no-edit && git push -f";
+      zed = "zeditor";
     };
     packages = with pkgs; [
       # Desktop
