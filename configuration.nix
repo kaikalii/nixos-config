@@ -4,6 +4,7 @@
 
 {
   pkgs,
+  config,
   hostName,
   ...
 }:
@@ -125,9 +126,10 @@
   hardware.nvidia = {
     modesetting.enable = true;
     powerManagement.enable = false;
-    open = false;
+    powerManagement.finegrained = false;
+    open = true;
     nvidiaSettings = true;
-    package = pkgs.linuxPackages.nvidiaPackages.stable;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
   system.stateVersion = "25.11"; # Do not change this for any reason!
