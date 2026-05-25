@@ -18,6 +18,7 @@
       gnomeExtensions.night-theme-switcher
       gnomeExtensions.quick-settings-audio-devices-renamer
       gnomeExtensions.quick-settings-audio-devices-hider
+      gnomeExtensions.tiling-shell
       # Apps
       zed-editor
       discord
