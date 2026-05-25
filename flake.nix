@@ -24,7 +24,7 @@
               hostName = name;
             };
             modules = [
-              ./configuration.nix
+              ./${name}/configuration.nix
               ./${name}/hardware-configuration.nix
               args.home-manager.nixosModules.home-manager
               {
