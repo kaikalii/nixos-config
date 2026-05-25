@@ -117,6 +117,8 @@
             "ctrl-g ctrl-c" = "git::Commit";
             "ctrl-g ctrl-p" = "git::Push";
             "ctrl-g ctrl-l" = "git::Pull";
+            "ctrl-g ctrl-f" = "git::Fetch";
+            "ctrl-g ctrl-a" = "git::StageAll";
           };
           unbind = {
             "ctrl-g" = "go_to_line::Toggle";
