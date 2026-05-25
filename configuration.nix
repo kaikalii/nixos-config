@@ -130,6 +130,10 @@
     open = true;
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
+    prime = {
+      intelBusId = "0:02:0";
+      nvidiaBusId = "1:00:0";
+    };
   };
 
   system.stateVersion = "25.11"; # Do not change this for any reason!
