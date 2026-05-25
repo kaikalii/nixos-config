@@ -42,7 +42,7 @@
       gui.user = "kai";
       gui.password = "syncthing";
       devices = {
-        "Desktop".id = "W7Q6455-YXY4XPX-7DAF3GR-DMG62DF-GZYJCN7-LN24LXB-RJWRXRC-EPNKZA2";
+        "Desktop".id = "FKZNY7S-WCLP5FX-S44TIT4-3MJJ43V-OF7GTIT-ZPG2V7V-GFJDRHV-Q6TBTQP";
         "Laptop".id = "OZSWG6Z-PTZAEZ7-U2I3GN2-RJFCIES-QVA36ZI-TVAPK6Y-UJIC3JZ-VFTJIQI";
         "Phone".id = "P4775T7-R4CQIFP-VPFSVUS-V426EHK-O2NOCVV-G5YS7VS-QKNQCRO-D4GCTQU";
       };
