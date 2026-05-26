@@ -75,7 +75,7 @@
           trust_all_worktrees = true;
         };
         terminal = {
-          font_size = 17.0;
+          font_size = 19.0;
           font_family = "Uiua386";
           font_fallbacks = [
             "Fira Code"
@@ -96,15 +96,15 @@
           "Uiua386"
           ".ZedMono"
         ];
-        ui_font_size = 18.0;
-        buffer_font_size = 17.0;
+        ui_font_size = 20.0;
+        buffer_font_size = 19.0;
         semantic_tokens = "combined";
         multi_cursor_modifier = "ctrl";
         profiles = {
           Uiua = {
             settings = {
               buffer_font_family = "Uiua386";
-              buffer_font_size = 18;
+              buffer_font_size = 20;
             };
           };
         };
