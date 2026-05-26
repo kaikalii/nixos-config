@@ -63,6 +63,9 @@
       enabled-extensions = [
         "dash-to-panel@jderose9.github.com"
         "nightthemeswitcher@romainvigier.fr"
+        "quicksettings-audio-devices-hider@marcinjahn.com"
+        "quicksettings-audio-devices-renamer@marcinjahn.com"
+        "tilingshell@ferrarodomenico.com"
       ];
       enable-hot-corners = false;
       favorite-apps = [
