@@ -20,6 +20,7 @@
       gnomeExtensions.quick-settings-audio-devices-renamer
       gnomeExtensions.quick-settings-audio-devices-hider
       gnomeExtensions.tiling-shell
+      gnomeExtensions.unblank
       # Apps
       zed-editor
       discord
@@ -66,6 +67,7 @@
         "quicksettings-audio-devices-hider@marcinjahn.com"
         "quicksettings-audio-devices-renamer@marcinjahn.com"
         "tilingshell@ferrarodomenico.com"
+        "unblank@sun.wxg@gmail.com"
       ];
       enable-hot-corners = false;
       favorite-apps = [
