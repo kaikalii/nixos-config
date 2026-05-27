@@ -37,7 +37,10 @@
     nix-ld.enable = true;
     vim.enable = true;
     git.enable = true;
-    steam.enable = true;
+    steam = {
+      enable = true;
+      extraCompatPackages = [ pkgs.proton-ge-bin ];
+    };
     appimage = {
       enable = true;
       binfmt = true;
@@ -76,6 +79,8 @@
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
   hardware.graphics.enable = true;
+  hardware.opengl.enable = true;
+  hardware.opengl.driSupport32Bit = true;
 
   # Geoclue
   location.provider = "geoclue2";
