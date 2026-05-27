@@ -100,6 +100,9 @@
         buffer_font_size = 19.0;
         semantic_tokens = "combined";
         multi_cursor_modifier = "ctrl";
+        lsp = {
+          rust-analyzer.initialization_options.check.command = "clippy";
+        };
         profiles = {
           Uiua = {
             settings = {
