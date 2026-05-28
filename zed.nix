@@ -122,6 +122,8 @@
             "ctrl-g ctrl-l" = "git::Pull";
             "ctrl-g ctrl-f" = "git::Fetch";
             "ctrl-g ctrl-a" = "git::StageAll";
+            "alt-left" = "pane::GoBack";
+            "alt-right" = "pane::GoForward";
           };
           unbind = {
             "ctrl-g" = "go_to_line::Toggle";
