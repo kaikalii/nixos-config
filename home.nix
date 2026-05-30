@@ -39,6 +39,9 @@
     sessionPath = [
       "$HOME/.cargo/bin"
     ];
+    sessionVariables = {
+      PATH = "$HOME/.cargo/bin:$PATH";
+    };
   };
   programs = {
     bash.enable = true;

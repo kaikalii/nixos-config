@@ -21,9 +21,6 @@
     starship
     gcc
     libffi
-    gnumake
-    pkg-config
-    alsa-lib
     ripgrep
     htop
     ripgrep
