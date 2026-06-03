@@ -17,6 +17,8 @@
       intelBusId = "0:02:0";
       nvidiaBusId = "1:00:0";
     };
+    dynamicBoost.enable = true;
+    videoAcceleration = true;
   };
 
   boot.kernelParams = [ "nvidia_drm.modeset=1" ];
