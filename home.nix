@@ -27,7 +27,7 @@
       modrinth-app
       rimsort
       spotify
-      fontforge
+      fontforge-gtk
       gimp
       # Langs
       python3
@@ -52,7 +52,7 @@
         path = "default";
         settings = {
           "browser.startup.page" = 1;
-          "browser.sessionstore.resume_from_crash" = true;
+          "browser.sessionstore.resume_from_crash" = false;
         };
       };
     };
@@ -61,6 +61,9 @@
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       clock-format = "12h";
+    };
+    "org/gnome/desktop/background" = {
+      picture-options = "spanned";
     };
     "org/gnome/shell" = {
       disable-user-extensions = false;
@@ -95,7 +98,7 @@
   home.file.".config/autostart/discord.desktop".text = ''
     [Desktop Entry]
     Name=Discord
-    Exec=${pkgs.discord}/bin/discord --start-minimized
+    Exec=${pkgs.discord}/bin/discord
     Type=Application
     Categories=Network;InstantMessaging;
   '';
