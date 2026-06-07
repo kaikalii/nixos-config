@@ -42,6 +42,23 @@
     sessionVariables = {
       PATH = "$HOME/.cargo/bin:$PATH";
     };
+    file = {
+      ".config/autostart/discord.desktop".text = ''
+        [Desktop Entry]
+        Name=Discord
+        Exec=${pkgs.discord}/bin/discord
+        Type=Application
+        Categories=Network;InstantMessaging;
+      '';
+      ".local/share/applications/modrinth.desktop".text = ''
+        [Desktop Entry]
+        Name=Modrinth App
+        Exec=env GDK_BACKEND=x11 WEBKIT_DISABLE_COMPOSITING_MODE=1 ${pkgs.modrinth-app}/bin/ModrinthApp %U
+        Type=Application
+        Categories=Game;
+        Terminal=false
+      '';
+    };
   };
   programs = {
     bash.enable = true;
@@ -94,12 +111,4 @@
       multi-monitors = false;
     };
   };
-
-  home.file.".config/autostart/discord.desktop".text = ''
-    [Desktop Entry]
-    Name=Discord
-    Exec=${pkgs.discord}/bin/discord
-    Type=Application
-    Categories=Network;InstantMessaging;
-  '';
 }
