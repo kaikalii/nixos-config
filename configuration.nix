@@ -68,8 +68,10 @@
     packages = [ fira-code ];
   };
 
-  # port 8384  is the default port to allow access from the network.
-  networking.firewall.allowedTCPPorts = [ 8384 ];
+  networking.firewall.allowedTCPPorts = [
+    8384
+    7860
+  ];
 
   # X11 windowing system.
   services.xserver.enable = true;
