@@ -26,6 +26,7 @@
     ripgrep
     lshw
     pciutils
+    mesa-demos # For glxinfo
   ];
 
   programs = {
