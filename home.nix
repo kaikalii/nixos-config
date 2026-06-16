@@ -23,6 +23,8 @@
       gnomeExtensions.unblank
       # Apps
       zed-editor
+      vscode
+      audacity
       discord
       modrinth-app
       rimsort
