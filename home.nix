@@ -101,6 +101,7 @@
         "firefox.desktop"
         "dev.zed.Zed.desktop"
         "discord.desktop"
+        "steam.desktop"
         "spotify.desktop"
         "org.gnome.Settings.desktop"
       ];
