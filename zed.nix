@@ -44,6 +44,7 @@
         drag_and_drop_selection = {
           enabled = false;
         };
+        soft_wrap = "editor_width";
         ui_font_family = ".SystemUIFont";
         cli_default_open_behavior = "existing_window";
         use_system_window_tabs = false;
